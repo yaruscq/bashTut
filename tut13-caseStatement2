@@ -1,0 +1,33 @@
+#! /bin/bash
+
+
+#		case expression in
+#			pattern1 )
+#				statements ;;
+#			pattern2 )
+#				statements ;;
+#			...
+#		esac
+
+echo
+echo -e "Enter some character : \c"    # On the same line
+read value
+
+
+case $value in
+	[a-z] )
+		echo "User entered $value: a to z" ;;
+	[A-Z] )
+		echo "User entered $value: A to Z" ;;
+	[0-9] )
+		echo "User entered $value: 0 to 9" ;;
+	? )      # pattern evalues any one-cha
+		echo "User entered $value: special character" ;;
+	* )      # pattern evalues a string
+		echo "Unknow input" ;;
+esac
+
+echo
+# When 'K' and the result is 'User entered K: a to z', 'LANG=C' should be entered in the terminal
+# LANG=C
+# The 'LANG' environment var indicstes the language/locale and encoding, where 'C' is the langugage setting

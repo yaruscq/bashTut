@@ -1,0 +1,31 @@
+#! /bin/bash
+
+echo
+# define an array var
+os=('ubuntu' 'MAC OS' 'windows' 'android')
+echo "${os[@]}"
+echo "${os[1]}"   # print Second element
+
+echo
+echo "${!os[@]}"   # '!' : print indices
+echo "${#os[@]}"   # '#' : length of an array
+
+echo "ADD entry =>"
+os[4]='Fedora'
+echo "${#os[@]} entries: ${os[@]}"   # '#' : length of an array
+
+echo
+echo "UPDATE =>"
+os[0]='Mint'
+echo "${os[@]}"   # print Second element
+echo
+echo 'REMOVE entry'
+unset os[2]
+echo "${os[@]}"   # print Second element
+echo
+echo "注意！ when string = dafkslflasdlfsa"
+string=dafkslflasdlfsa
+echo "When it's treaded as an array, \${string[@]} is the whole string => "
+echo ${string[@]}
+echo "Value of [0] is ${string[0]}"   # value of a string is assign to [0], so [1] will be nothing 
+echo "Value of [1] is ${string[1]}"

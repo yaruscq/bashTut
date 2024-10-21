@@ -1,0 +1,53 @@
+#! /bin/bash
+
+
+# Shell Scripting Tutorial for Beginners 8 - Logical 'AND' Operator
+
+# Use " [ ] && [ ] ", " -a ", " [[  && ]] "
+
+# 方法 1
+age=25
+
+if [ "$age" -gt 18 ] && [ "$age" -lt 30 ]
+then
+	echo "Age of $age is valid."
+
+else 
+	echo "Age of $age is not valid!!!" 
+fi
+
+echo
+
+
+
+
+# 方法 2
+if [[ "$age" -gt 18  && "$age" -lt 30 ]]
+then
+	echo "I say: Age of $age is valid."
+
+else 
+	echo "I say: Age of $age is not valid!!!" 
+fi
+
+echo
+
+
+
+
+
+# 方法 3
+# -a: 代表 AND operator
+age2=60
+
+if [ "$age2" -gt 18 -a "$age2" -lt 30 ]
+then
+	echo "Age of $age2 is valid."
+
+else 
+	echo "Age of $age2 is not valid!!!" 
+fi
+
+echo
+
+

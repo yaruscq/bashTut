@@ -1,0 +1,101 @@
+#! /bin/bash
+
+# For check file conditions
+# 檢查某檔案是否存在
+# \c: keep the same line after echo
+# -e: to interpret "\c", otherwise "\c" will be interpreted literary as string
+Echo -e "Enter the name of the File : \c" 
+
+read file_name
+
+# -e: check exists; 
+# -f: check if it's regular file
+# -d: check if it's directory
+
+if [ -f $file_name ] 
+then
+ echo "$file_name found"
+else 
+ echo "$file_name not found"
+fi
+
+
+
+
+
+# 檢查某匣子是否存在
+echo
+
+echo -e "Enter the name of the directory : \c" 
+
+read file_name
+
+# -d: check if it's directory
+
+if [ -d $file_name ] 
+then
+ echo "$file_name directory found"
+else 
+ echo "$file_name directory NOT found"
+fi
+
+
+
+# -b: for blog files -- music, video
+# -c: for character files 
+# -s : file empty ?
+
+
+
+# 檢查檔案某是否是空的
+echo
+
+echo -e "Enter the name of the file : \c"
+
+read file_name
+
+# -d: check if it's directory
+
+if [ -s $file_name ] 
+then
+ echo "$file_name is NOT empty"
+else 
+ echo "$file_name is empty"
+fi
+
+
+
+
+echo
+# -x: 是否可以被執行
+
+echo -e "Enter the name of the file : \c"
+
+read file_name
+
+# -d: check if it's directory
+
+if [ -x $file_name ] 
+then
+ echo "$file_name can be executed"
+else 
+ echo "$file_name can NOT be executed"
+fi
+
+# Bash File Testing
+# -b filename - Block special file
+# -c filename - Special character file
+# -d directoryname - Check for directory Existence
+# -e filename - Check for file existence, regardless of type (node, directory, socket, etc.)
+# -f filename - Check for regular file existence not a directory
+# -G filename - Check if file exists and is owned by effective group ID
+# -G filename set-group-id - True if file exists and is set-group-id
+# -k filename - Sticky bit
+# -L filename - Symbolic link
+# -O filename - True if file exists and is owned by the effective user id
+# -r filename - Check if file is a readable
+# -S filename - Check if file is socket
+# -s filename - Check if file is nonzero size || file empty?
+# -u filename - Check if file set-user-id bit is set
+# -w filename - Check if file is writable
+# -x filename - Check if file is executable

@@ -1,0 +1,49 @@
+#! /bin/bash
+
+# while loop
+
+
+n=1
+
+	while (( $n <= 5 ))
+	do 
+		echo "$n"
+		(( n++ ))
+		sleep 1   # Sleep one second: print every number with an interval of 1 sec
+		
+	done
+
+
+
+
+
+
+# Open 3 more terminals undr Ubuntu
+
+# n=1 
+
+# while [ $n -le 3 ]
+# do
+# 	echo "$n"
+# 	(( n++ ))
+# 	zsh   # OR  'gnome-terminal &', xterm' terminal
+# done 
+
+
+echo "OPEN TWO MORE TERMINAL WINDOWS/TABS UNDER MAC"
+
+n=1 
+while [ $n -le 2 ]
+do
+    echo "Opening zsh in new terminal window $n..."
+    
+    # Open a new Terminal window with zsh
+    osascript <<EOF
+    tell application "Terminal"
+        do script "zsh"
+        activate
+    end tell
+EOF
+
+    n=$((n+1))  # Increment n
+done

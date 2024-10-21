@@ -1,0 +1,33 @@
+#! /bin/bash
+
+
+#		case expression in
+#			pattern1 )
+#				statements ;;
+#			pattern2 )
+#				statements ;;
+#			...
+#		esac
+
+
+automobile=$1
+
+
+case $automobile in
+	"Toyota" )
+		echo "Cost of $automobile is 200 dollar" ;;
+	"Honda" )
+		echo "Cost of $automobile is 400 dollar" ;;
+	"BMW" )
+		echo "Cost of $automobile is 800 dollar" ;;
+	"Rolls-Royce" )
+		echo "Cost of $automobile is 1000 dollar" ;;
+	* )   # *: wildcard
+		echo "Brands are not known!" ;;
+esac
+
+echo
+
+
+# type "Toyota" after  ./[filename]
+# Regex can be used to define the "pattern"

@@ -1,0 +1,55 @@
+#! /bin/bash
+
+
+# Shell Scripting Tutorial for Beginners 9 - Logical 'OR' Operator
+# https://www.youtube.com/watch?v=RtbeGJfssGQ&list=PLS1QulWo1RIYmaxcEqw5JhK3b-6rgdWO_&index=9
+
+
+# Use " [ ] || [ ] ", " -o ", " [[  || ]] "
+
+# 方法 1
+age=60
+
+if [ "$age" -lt 18 ] || [ "$age" -gt 30 ]
+then
+	echo "Age of $age is valid."
+
+else 
+	echo "Age of $age is not valid!!!" 
+fi
+
+echo
+
+
+
+
+# 方法 2
+if [[ "$age" -lt 18  || "$age" -gt 30 ]]
+then
+	echo "I say: Age of $age is valid."
+
+else 
+	echo "I say: Age of $age is not valid!!!" 
+fi
+
+echo
+
+
+
+
+
+# 方法 3
+# -a: 代表 AND operator
+age2=27
+
+if [ "$age2" -lt  18 -o "$age2" -gt 30 ]
+then
+	echo "Age of $age2 is valid."
+
+else 
+	echo "Age of $age2 is not valid!!!" 
+fi
+
+echo
+
+

@@ -1,0 +1,44 @@
+#! /bin/bash
+
+# while loop
+
+
+	# while [ condition ]
+	# do 
+	# 	command1
+	# 	command2
+	# 	command3
+	# done
+
+n=1
+
+	while [ $n -le 10 ]
+	do 
+		echo "$n"
+		n=$(( n+1 ))
+
+	done
+
+echo
+echo "INCREMENT 1"
+
+n=1
+
+	while [ $n -le 20 ]  # OR  (( $n <= ))
+	do 
+		echo "$n"
+		(( ++n ))
+		
+	done
+
+
+echo "INCREMENT 2"
+
+n=1
+
+	while (( $n <= 15 ))
+	do 
+		echo "$n"
+		(( ++n ))
+		
+	done
