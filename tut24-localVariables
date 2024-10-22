@@ -18,3 +18,7 @@ echo "My name is $name"
 print Max  # needs "local", otherwise, it will be Max after asign its value to the function
 
 echo "His name is $name : After"
+
+
+
+

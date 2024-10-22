@@ -1,0 +1,33 @@
+#! /bin/bash
+
+# tut25: Function Example
+
+
+usage(){
+
+	echo "You need to provide an argument :"
+	echo "usage : $0 file_name"   # $0: Refers to the name of the script itself.
+}
+
+is_file_exist(){
+
+	local file="$1"       # local var
+
+	# If the file exists, it returns 0 (true). Otherwise, it returns 1 (false).
+	[[ -f "$file" ]] && return 0 || return 1   
+
+} 
+
+
+#  $#: Refers to the number of arguments passed to the script.
+# [[ $# -eq 0 ]]: If no arguments were provided (i.e., $# equals 0), the usage function is called to display how to use the script.
+[[ $# -eq 0 ]] && usage
+
+
+if (is_file_exist "$1")
+then
+	echo "File found"
+else
+	echo "File not found"
+
+fi
