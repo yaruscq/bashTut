@@ -1,0 +1,36 @@
+#! /bin/bash
+
+# tut27-b: Signal Statement adnd Traps scripting
+
+
+file=/Users/cheng-changchou/Documents/MyGit/bashTut/file.txt
+
+trap "rm -f $file && echo file deleted; exit" 0 2 15 
+
+echo "pid is $$"   # $$: pid of the script
+
+# loop
+while (( COUNT < 10 ))
+do
+	sleep 10
+	(( COUNT ++ ))
+	echo $COUNT
+done
+exit 0   # Ctrl + Z: Suspend signal
+
+
+
+
+# $ man -7 signal : shows all the signals
+
+
+
+# echo "------TRAP---------"
+
+# # 0: success; when 0 exits, the command should be executed
+# trap "echo Exit commands is detected" 0  
+
+# echo "Hello world"
+
+# exit 0
+

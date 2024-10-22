@@ -1,0 +1,46 @@
+#! /bin/bash
+
+# tut27: Signal Statement adnd Traps scripting
+
+
+
+
+# SIGNAL COMMANDS
+
+# Ctrl + C: stop signal
+# Ctrl + Z: Suspend signal
+# kill -9 [pid]
+
+
+# TRAP: to catch and interrupt
+# 2: SIGINT; when Ctrl + C, trap will be executed
+# trap cannot catch "kill" (SIGKILL, SIGSTOP)commands
+trap "echo Exit signal is detected" 2 
+
+echo "pid is $$"   # $$: pid of the script
+
+# loop
+while (( COUNT < 10 ))
+do
+	sleep 10
+	(( COUNT ++ ))
+	echo $COUNT
+done
+exit 0   # Ctrl + Z: Suspend signal
+
+
+
+
+# $ man -7 signal : shows all the signals
+
+
+
+# echo "------TRAP---------"
+
+# # 0: success; when 0 exits, the command should be executed
+# trap "echo Exit commands is detected" 0  
+
+# echo "Hello world"
+
+# exit 0
+
