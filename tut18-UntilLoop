@@ -1,0 +1,39 @@
+#! /bin/bash
+
+# tut18: UNTIL LOOP
+
+# syntax
+
+	# until [ condition ]  # condition is flase
+	# do 
+	# 	command1
+	# 	command2
+	# 	...
+	# 	...
+	# 	commandN
+	# done
+
+echo "Tut 18: Until Loop"
+echo
+
+n=1
+
+until [ $n -ge 10 ]  # until condition is flase; While Loop: condition is true
+do
+	echo $n
+	# n=$((n+1)) # increment: OR (( n++ ))
+	((n++))    # increment
+	# ((++n))        # increment
+done
+
+
+
+echo
+
+n=1
+
+until [ $n -ge 10 ]
+do
+    echo $n
+    n=$((n+2))  # Increment n by 2
+done
