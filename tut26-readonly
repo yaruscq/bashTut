@@ -1,0 +1,34 @@
+#! /bin/bash
+
+# tut26: Readonly
+
+var=31
+
+readonly var
+
+var=50
+
+echo "var => $var"
+
+
+
+hello(){
+
+	echo "Hello World!"
+}
+
+readonly -f hello   # -f : to make a function readonly
+
+hello() {
+
+	echo "Hello QQ!"
+}
+
+
+readonly   # show all the variables which are  READONLY
+
+
+readonly -p  # show all the VARIABLES which are  READONLY
+
+
+readonly -f  # show all the FUNCTIONS which are  READONLY
