@@ -1,0 +1,116 @@
+#! /bin/bash
+
+# tut19: FOR LOOP
+
+# syntax 1
+
+	# for VARIABLE in 1 2 3 4 5 .. N
+	# do 
+	# 	command1
+	# 	command2
+	# 	commandN
+	# done
+# OR----------------------------------
+# syntax 2
+
+	# for VARIABLE in file1 file2 file3
+	# do 
+	# 	command1 on $VARIABLE
+	# 	command2
+	# 	commandN
+	# done
+# OR----------------------------------
+# syntax 3
+
+	# for OUTPUT in $(Linux-OR-Unix-Command-Here)
+	# do 
+	# 	command1 on $OUTPUT
+	# 	command2 on $OUTPUT
+	# 	commandN
+	# done
+# OR----------------------------------
+# syntax 4
+
+	# for (( EXP1; EXP2; EXP3 ))
+	# do 
+	# 	command1
+	# 	command2
+	# 	commandN
+	# done
+
+
+echo "Syntax 1.a:"
+
+	for VAR in 1 2 3 4 5
+	do 
+		echo $VAR
+	done
+
+
+
+echo
+echo "Syntax 1.b: {}"
+
+	for VAR in {1..10}
+	do 
+		echo $VAR
+	done
+
+
+
+echo ${BASH_VERSION}   # works when bash ver. over 4.0
+echo "Syntax 1.c: INCREMENT"
+
+	for VAR in {1..10..2}   #{START..END..INCREMENT}
+	do 
+		echo $VAR
+	done
+
+
+
+
+
+
+echo
+echo "Syntax 2:"
+
+	for (( i=0; i<5; i++))
+	do 
+		echo $i
+	done
+
+# OR----------------------------------
+# syntax 2
+
+	# for VARIABLE in file1 file2 file3
+	# do 
+	# 	command1 on $VARIABLE
+	# 	command2
+	# 	commandN
+	# done
+# OR----------------------------------
+# syntax 3
+
+	# for OUTPUT in $(Linux-OR-Unix-Command-Here)
+	# do 
+	# 	command1 on $OUTPUT
+	# 	command2 on $OUTPUT
+	# 	commandN
+	# done
+# OR----------------------------------
+# syntax 4
+
+	# for (( EXP1; EXP2; EXP3 ))  # EXP1: expressions interact in sequence
+	# do 
+	# 	command1
+	# 	command2
+	# 	commandN
+	# done
+
+
+
+
+
+
+
+
