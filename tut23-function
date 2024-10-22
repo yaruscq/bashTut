@@ -1,0 +1,40 @@
+#! /bin/bash
+
+# tut23: FUNCTIONS
+
+# function name(){
+# 	commands
+# }
+
+# name() {
+# 	commands
+# }
+
+
+
+function hello(){
+	echo "hello"
+}
+
+
+
+quit() {
+	exit     # quit the script itself
+}
+
+hello
+
+echo "foo"
+
+
+function print(){
+
+	echo $1 $2 $3   # $1, $2, $3 are the arguments you can insert
+
+}
+
+print hello world again
+print world
+print again
+
+quit
