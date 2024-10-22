@@ -1,0 +1,29 @@
+#! /bin/bash
+
+# tut22: BREAK
+
+# to escape the loop from its regular execution
+
+echo "----------BREAK to get out of loop prematurely------------"
+
+for (( i=1; i<=10; i++ ))
+do
+	if [ $i -gt 5 ]
+	then
+		break
+	fi
+	echo "$i"
+done
+
+
+echo
+echo "----------CONTINUE------------"
+
+for (( i=1; i<=10; i++ ))
+do
+	if [ $i -eq 3 -o $i -eq 6 ]  # -o: OR
+	then
+		continue  # whenever meets the conditions, it will skip and go to next iteration
+	fi
+	echo "$i"
+done
