@@ -1,0 +1,43 @@
+#! /bin/bash
+
+# Read a file content in Bash
+
+
+echo "Read a File Content in Bash"
+echo "Method 1"
+
+while read p
+do
+    echo $p
+    
+done < tut16-Sleep
+
+echo
+
+
+
+
+
+echo "Method 2"
+cat tut17-ReadFileContent | while read p
+do
+    echo $p
+done
+
+
+
+
+
+echo
+
+echo "Method 3: in case of special char: Internal Field Separatior (IFS) to recognize boundary"
+# -r: prevent 'backslash' from being interpreted
+# space ' ' is needed after IFS=
+
+while IFS=' ' read -r line   
+do    
+    echo $line
+    
+done < /Users/cheng-changchou/.bashrc
+
+echo
