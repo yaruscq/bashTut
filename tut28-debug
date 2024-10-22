@@ -1,6 +1,15 @@
-#! /bin/bash
+#! /bin/bash -x
 
-# tut27-b: Signal Statement adnd Traps scripting
+# tut28: DEBUG
+
+
+# debug option:  bash -x [bash file]
+# 或者在第一行 .../bash -x
+# for debugging section:  
+	# set -x 
+	# [section for debug]   
+	# set +x
+
 
 
 file=/Users/cheng-changchou/Documents/MyGit/bashTut/file.txt
