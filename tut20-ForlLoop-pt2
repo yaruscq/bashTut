@@ -1,0 +1,80 @@
+#! /bin/bash
+
+# tut20: FOR LOOP for COMMANDS
+
+
+for command in ls pwd date
+	do 
+		echo "----------$command------------"
+		$command
+	done
+
+
+
+echo "----------PRINT OUT Directory------------"
+for item in *
+	do 
+		if [ -d $item ]
+		then
+			echo $item
+		fi
+	done
+
+
+
+echo "----------PRINT OUT ALL FILES------------"
+for item in *
+	do 
+		if [ -f $item ]
+		then
+			echo $item
+		fi
+	done
+
+
+
+
+
+
+
+
+
+
+
+
+
+# syntax 1
+
+	# for VARIABLE in 1 2 3 4 5 .. N
+	# do 
+	# 	command1
+	# 	command2
+	# 	commandN
+	# done
+# OR----------------------------------
+# syntax 2
+
+	# for VARIABLE in file1 file2 file3
+	# do 
+	# 	command1 on $VARIABLE
+	# 	command2
+	# 	commandN
+	# done
+# OR----------------------------------
+# syntax 3
+
+	# for OUTPUT in $(Linux-OR-Unix-Command-Here)
+	# do 
+	# 	command1 on $OUTPUT
+	# 	command2 on $OUTPUT
+	# 	commandN
+	# done
+# OR----------------------------------
+# syntax 4
+
+	# for (( EXP1; EXP2; EXP3 ))
+	# do 
+	# 	command1
+	# 	command2
+	# 	commandN
+	# done
