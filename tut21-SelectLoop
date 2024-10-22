@@ -1,0 +1,32 @@
+#! /bin/bash
+
+# tut21: SELECT LOOP
+
+
+echo "----------SELECT LOOP------------"
+
+select name in Miko Fedo Fifi
+	do 
+		echo "$name selected"
+	done
+
+echo
+echo "----------SELECT LOOP with CASE STATEMENTS------------"
+
+select name in Miko Fedo Fifi Tata Yih
+	do
+		case $name in
+		Miko)
+			echo Miko selected;;  
+		Fedo)
+			echo Fedo selected;;
+		Fifi)
+			echo Fifi selected;;
+		Tata)
+			echo Tata selected;;
+		Yih)
+			echo Yih selected;;
+		*)
+			echo "Error please provide the no between 1..5"
+		esac
+	done
